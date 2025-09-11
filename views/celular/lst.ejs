@@ -8,7 +8,7 @@
          <button type="submit">Pesquisar</button>
     </form>
     </div>
-    <a href="/celular/add">Adicionar Celular</a>
+    <a href="/celular/add" class="btn" >Adicionar Celular</a>
     <table>
         <tr>
             <td>Nome</td>
@@ -28,8 +28,8 @@
             <td><%=armazenamento%></td>
              <td><%=preco%></td>
             <td><%=fabricante%></td>
-            <td><a href="/celular/edt/<%=id%>">Editar</a>
-            <a href="/celular/del/<%=id%>">Excluir</a></td>
+            <td><a href="/celular/edt/<%=id%>" class="btn" >Editar</a>
+            <a href="/celular/del/<%=id%>" class="btn" >Excluir</a></td>
         </tr>
         <%}%>
     </table>

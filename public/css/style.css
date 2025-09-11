@@ -1,7 +1,7 @@
 /* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #b5b4f1;
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,7 +15,7 @@ body {
   }
   
   .container {
-    background-color: #fff;
+    background-color: #f3f4ff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -74,7 +74,7 @@ body {
   }
   
   .btn {
-    background-color: #28a745;
+    background-color: #4f4df5;
     color: #fff;
   }
   
@@ -89,7 +89,7 @@ body {
   }
   
   .btn.delete {
-    background-color: #dc3545;
+    background-color: #fa3d50;
     color: #fff;
   }
   
@@ -112,7 +112,7 @@ body {
   table th, table td {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #d8cdff;
   }
   
   table th {

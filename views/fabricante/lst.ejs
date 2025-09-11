@@ -1,6 +1,14 @@
 <%-include('../cabecalho.ejs')%>
     <h1>Fabricantes</h1>
-    <a href="/fabricante/add">Adicionar fabricante</a>
+      <div>
+        <form action="
+        " method="post">
+        <input type="text" name="filtro"
+         id="" placeholder="digite o nome">
+         <button type="submit">Pesquisar</button>
+    </form>
+    </div>
+    <a href="/fabricante/add" class="btn">Adicionar fabricante</a>
     <table>
         <tr>
             <td>Nome</td>
@@ -12,8 +20,8 @@
         <tr>
             <td><%=nome%></td>
             <td><%=anofundacao%></td>
-            <td><a href="/fabricante/edt/<%=id%>">Editar</a>
-            <a href="/fabricante/del/<%=id%>">Excluir</a></td>
+            <td><a href="/fabricante/edt/<%=id%>" class="btn">Editar</a>
+            <a href="/fabricante/del/<%=id%>" class="btn">Excluir</a></td>
         </tr>
         <%}%>
     </table>
