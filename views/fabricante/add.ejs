@@ -1,14 +1,16 @@
 <%-include('../cabecalho.ejs')%>
-<h1>Adicionar Aluno</h1>
+<h1>Adicionar Fabricante</h1>
 <div>
-<a href="/aluno/lst">Listar</a>
+<a href="/fabricante/lst">Listar</a>
 </div>
 <div>
     <form  method="post">
         <label>Nome:</label>
         <input type="text" name="nome"><br>
-         <label>Matrícula:</label>
-        <input type="text" name="matricula"><br>
+        
+         <label>Ano Fundação:</label>
+        <input type="number" name="anofundacao"><br>
+
         <button type="submit">Cadastrar</button>
         
     </form>

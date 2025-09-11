@@ -1,10 +1,9 @@
 import express from 'express';
 const router = express.Router();
-//Busca o AlunoController
-import AlunoController from '../controllers/AlunoController.js'
-const controle = new AlunoController();
+import CelularController from '../controllers/CelularController.js'
+const controle = new CelularController();
 
-const caminhobase = 'aluno/'
+const caminhobase = 'celular/'
 
 router.get('/' + caminhobase + 'add', controle.openAdd)
 router.post('/' + caminhobase + 'add', controle.add)

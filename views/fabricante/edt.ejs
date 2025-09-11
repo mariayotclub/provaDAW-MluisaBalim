@@ -1,20 +1,23 @@
 <%-include('../cabecalho.ejs')%>
-<h1>Editar Aluno</h1>
+<h1>Editar Fabricante</h1>
 <div>
-<a href="/aluno/lst">Listar</a>
+<a href="/fabricante/lst">Listar</a>
 </div>
 <div>
     <form  method="post">
        
         <input type="hidden" name="id" 
-        value="<%=Aluno.id%>"><br>
+        value="<%=Fabricante.id%>"><br>
+
         <label>Nome:</label>
         <input type="text" name="nome" 
-        value="<%=Aluno.nome%>"><br>
-         <label>Matrícula:</label>
-        <input type="text" name="matricula"
-        value="<%=Aluno.matricula%>"
+        value="<%=Fabricante.nome%>"><br>
+
+         <label>Ano de fundação:</label>
+        <input type="number" name="anofundacao"
+        value="<%=Fabricante.anofundacao%>"
         ><br>
+
         <button type="submit">Cadastrar</button>
         
     </form>

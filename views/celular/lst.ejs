@@ -1,0 +1,36 @@
+<%-include('../cabecalho.ejs')%>
+    <h1>Celulares</h1>
+    <div>
+        <form action="
+        " method="post">
+        <input type="text" name="filtro"
+         id="" placeholder="digite o nome">
+         <button type="submit">Pesquisar</button>
+    </form>
+    </div>
+    <a href="/celular/add">Adicionar Celular</a>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Modelo</td>
+            <td>Sistema</td>
+            <td>Armazenamento</td>
+            <td>Preço</td>
+            <td>Fabricante</td>
+            <td>Ações</td>
+        </tr>
+      
+        <%for (const {id, nome, modelo, sistema, armazenamento, preco, fabricante} of Celulares) {%>
+        <tr>
+            <td><%=nome%></td>
+            <td><%=modelo%></td>
+             <td><%=sistema%></td>
+            <td><%=armazenamento%></td>
+             <td><%=preco%></td>
+            <td><%=fabricante%></td>
+            <td><a href="/celular/edt/<%=id%>">Editar</a>
+            <a href="/celular/del/<%=id%>">Excluir</a></td>
+        </tr>
+        <%}%>
+    </table>
+ <%-include('../rodape.ejs')%>
