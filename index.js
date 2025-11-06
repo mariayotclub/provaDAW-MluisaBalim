@@ -2,8 +2,9 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import routes from './routes/route.js'; // rotas externas
-import CelularRoutes from './routes/CelularRoutes.js'; // rotas externas
-import FabricanteRoutes from './routes/FabricanteRoutes.js'; // rotas externas
+import CelularRoutes from './routes/ExposicaoRoutes.js'; // rotas externas
+import ArtistaRoutes from './routes/ArtistaRoutes.js'; // rotas externas
+import ObrasRoutes from './routes/ObrasRoutes.js';
 
 
 const app = express();
@@ -22,7 +23,8 @@ app.set('views', join(__dirname, '/views'));
 
 // Rotas
 app.use(CelularRoutes)
-app.use(FabricanteRoutes)
+app.use(ArtistaRoutes)
+app.use(ObrasRoutes)
 app.use(routes)
 app.listen(3001)
 // Exporta o handler compatível com Vercel

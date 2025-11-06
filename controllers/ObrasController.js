@@ -1,9 +1,9 @@
 
-import Fabricante from '../models/Fabricante.js'
+import Obras from '../models/Obras.js'
 
-export default class FabricanteController{
+export default class ObrasController{
 
-    constructor(caminhoBase='fabricante/'){
+    constructor(caminhoBase='obras/'){
         this.caminhoBase = caminhoBase
     
         this.openAdd = async(req, res)=>{
@@ -11,22 +11,24 @@ export default class FabricanteController{
         }
         this.add = async(req, res)=>{
            
-            await Fabricante.create({
-                nome: req.body.nome,
-                anofundacao:req.body.anofundacao
+            await Obras.create({
+                nomeColecao: req.body.nomeColecao,
+                artista: req.body.artista,
+                tipo: req.body.tipo,
+                descricao: req.body.descricao,
             });
             res.redirect('/'+caminhoBase + 'add');
         }
         this.list = async(req, res)=>{
-            const resultado = await Fabricante.find({})
-            res.render(caminhoBase + 'lst', {Fabricantes:resultado})
+            const resultado = await Obras.find({})
+            res.render(caminhoBase + 'lst', {Obrass:resultado})
         }
         this.find = async(req, res)=>{
             const filtro = req.body.filtro;
             const resultado = await 
-            Fabricante.find({ nome: { $regex: filtro,
+            Obras.find({ nome: { $regex: filtro,
                 $options: "i" }})
-            res.render(caminhoBase + 'lst', {Fabricantes:resultado})
+            res.render(caminhoBase + 'lst', {Obrass:resultado})
         }
 
      
@@ -34,21 +36,21 @@ export default class FabricanteController{
          this.openEdt = async(req, res)=>{
             const id = req.params.id
             console.log(id)
-            const fabricante = await Fabricante.findById(id) 
-            console.log(fabricante)
+            const obras = await Obras.findById(id) 
+            console.log(obras)
             res.render(caminhoBase + "edt", 
-                {Fabricante:fabricante})
+                {Obras:obras})
         }
 
 
         this.edt = async(req, res)=>{
-        await Fabricante.findByIdAndUpdate(req.params.id, req.body)
+        await Obras.findByIdAndUpdate(req.params.id, req.body)
         res.redirect('/'+caminhoBase + 'lst');
         
         }
 
          this.del = async(req, res)=>{
-        await Fabricante.findByIdAndDelete(req.params.id)
+        await Obras.findByIdAndDelete(req.params.id)
         res.redirect('/'+caminhoBase + 'lst');
         
         }

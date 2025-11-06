@@ -1,0 +1,35 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Editar Obras</h1>
+<div>
+<a href="/obras/lst" class="btn" >Listar</a>
+</div>
+<div>
+    <form  method="post">
+       
+        <input type="hidden" name="id" 
+        value="<%=Obras.id%>"><br>
+
+        <label>Coleção:</label>
+            <input type="text" name="nomeColecao" 
+        value="<%=Obras.nome%>"><br>
+
+         <label>Artista:</label>
+            <input type="date" name="artista"
+        value="<%=Obras.artista%>"
+        ><br>
+
+        <label>Tipo:</label>
+            <input type="number" name="tipo"
+        value="<%=Obras.tipo%>"><br>
+
+        <label>Descrição:</label>
+            <input type="text" name="descricao"
+        value="<%=Obras.descricao%>"
+        ><br>
+
+        <button type="submit">Atualizar Dados</button>
+        
+    </form>
+</div>
+
+<%-include('../rodape.ejs')%>

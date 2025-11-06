@@ -1,0 +1,27 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Adicionar Exposição</h1>
+<div>
+<a href="/exposicao/lst" class="btn" >Listar</a>
+</div>
+<div>
+    <form  method="post">
+        <label>Nome Exposição</label>
+        <input type="text" name="nomeExposicao"><br>
+
+         <label>Tema</label>
+        <input type="text" name="tema"><br>
+
+        <label>Nome Coleção</label>
+        <input type="text" name="nomeColecao"><br>
+
+         <label>Artista</label>
+        <select name="artista" id="">
+            <option value=""></option>
+            <option value="oi">oi</option>
+        </select>
+        <button type="submit">Cadastrar</button>
+        
+    </form>
+</div>
+
+<%-include('../rodape.ejs')%>
