@@ -12,7 +12,6 @@ export default class ExposicaoController{
         this.add = async(req, res)=>{
            
             await Exposicao.create({
-                tipo: req.body.tipo,
                 artista: req.body.artista,
                 tema: req.body.tema,
                 nomeColecao: req.body.nomeColecao,

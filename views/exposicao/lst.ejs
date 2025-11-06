@@ -1,5 +1,5 @@
 <%-include('../cabecalho.ejs')%>
-    <h1>Celulares</h1>
+    <h1>Exposições</h1>
     <div>
         <form action="
         " method="post">
@@ -8,28 +8,24 @@
          <button type="submit">Pesquisar</button>
     </form>
     </div>
-    <a href="/celular/add" class="btn" >Adicionar Celular</a>
+    <a href="/exposicao/add" class="btn" >Adicionar Exposicao</a>
     <table>
         <tr>
-            <td>Nome</td>
-            <td>Modelo</td>
-            <td>Sistema</td>
-            <td>Armazenamento</td>
-            <td>Preço</td>
-            <td>Fabricante</td>
+            <td>Nome da exposição individual</td>
+            <td>Tema</td>
+            <td>Artista</td>
             <td>Ações</td>
+        
         </tr>
       
-        <%for (const {id, nomeColecao, modelo, sistema, armazenamento, preco, fabricante} of Celulares) {%>
+        <%for (const {id, nomeColecao, tema, artista} of Exposicoes) {%>
         <tr>
             <td><%=nomeColecao%></td>
-            <td><%=modelo%></td>
-             <td><%=sistema%></td>
-            <td><%=armazenamento%></td>
-             <td><%=preco%></td>
-            <td><%=fabricante%></td>
-            <td><a href="/celular/edt/<%=id%>" class="btn" >Editar</a>
-            <a href="/celular/del/<%=id%>" class="btn" >Excluir</a></td>
+            <td><%=tema%></td>
+             <td><%=artista%></td>
+            
+            <td><a href="/exposicao/edt/<%=id%>" class="btn" >Editar</a>
+            <a href="/exposicao/del/<%=id%>" class="btn" >Excluir</a></td>
         </tr>
         <%}%>
     </table>

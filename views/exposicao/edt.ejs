@@ -1,50 +1,29 @@
 <%-include('../cabecalho.ejs')%>
-<h1>Editar Celular</h1>
+<h1>Editar Exposicao</h1>
 <div>
-<a href="/celular/lst" class="btn" >Listar</a>
+<a href="/exposicao/lst" class="btn" >Listar</a>
 </div>
 <div>
     <form  method="post">
        
         <input type="hidden" name="id" 
-        value="<%=Celular.id%>"><br>
+        value="<%=Exposicao.id%>"><br>
 
-        <label>Nome:</label>
+        <label>Nome da Exposição Individual:</label>
         <input type="text" name="nomeColecao" 
-        value="<%=Celular.nomeColecao%>"><br>
+        value="<%=Exposicao.nomeColecao%>"><br>
 
-         <label>Modelo:</label>
-        <input type="text" name="modelo"
-        value="<%=Celular.modelo%>"
-        ><br>
+           <label>Tema:</label>
+        <input type="text" name="tema" 
+        value="<%=Exposicao.tema%>"><br>
 
-         <label>Sistema:</label>
-        <input type="text" name="sistema" 
-        value="<%=Celular.sistema%>"><br>
-
-         <label>Armazenamento:</label>
-        <input type="text" name="armazenamento"
-        value="<%=Celular.armazenamento%>"
-        ><br>
-
-         <label>Preço:</label>
-        <input type="text" name="preco" 
-        value="<%=Celular.preco%>"><br>
-
-           <label>Fabricante</label>
-        <select name="fabricante" id="">
+           <label>Artista</label>
+        <select name="artista" id="">
             <option value=""></option>
-            <option value="Xiaomi">Xiaomi</option>
-            <option value="Apple">Apple</option>
-            <option value="Samsung">Samsung</option>
-            <option value="Motorola">Motorola</option>
-            <option value="Nokia">Nokia</option>
-            <option value="Huawei">Huawei</option>
-            <option value="OnePlus">OnePlus</option>
-            <option value="Infinix">Infinix</option>
+            <option value="oi">oi</option>
         </select>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Atualizar</button>
         
     </form>
 </div>
