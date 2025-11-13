@@ -16,6 +16,7 @@ export default class ObrasController{
                 artista: req.body.artista,
                 tipo: req.body.tipo,
                 descricao: req.body.descricao,
+                imagem: req.file.buffer
             });
             res.redirect('/'+caminhoBase + 'add');
         }
