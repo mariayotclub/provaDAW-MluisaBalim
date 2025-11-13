@@ -5,7 +5,7 @@ import routes from './routes/route.js'; // rotas externas
 import CelularRoutes from './routes/ExposicaoRoutes.js'; // rotas externas
 import ArtistaRoutes from './routes/ArtistaRoutes.js'; // rotas externas
 import ObrasRoutes from './routes/ObrasRoutes.js';
-import EventoRoutes from './routes/ObrasRoutes.js';
+import EventoRoutes from './routes/EventoRoutes.js';
 
 
 const app = express();

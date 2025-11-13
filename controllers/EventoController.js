@@ -12,9 +12,9 @@ export default class EventoController{
         this.add = async(req, res)=>{
            
             await Evento.create({
-                data: req.body.data,
-                tipo: req.body.tipo,
                 nomeEvento: req.body.nomeEvento,
+                tipo: req.body.tipo,
+                data: req.body.data,  
             });
             res.redirect('/'+caminhoBase + 'add');
         }
