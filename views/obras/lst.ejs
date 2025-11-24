@@ -1,12 +1,11 @@
 <%-include('../cabecalho.ejs')%>
     <h1>Obras</h1>
-      <div>
+    <div>
         <form action="
         " method="post">
-        <input type="text" name="filtro"
-         id="" placeholder="digite o nome">
-         <button type="submit">Pesquisar</button>
-    </form>
+            <input type="text" name="filtro" id="" placeholder="digite o nome">
+            <button type="submit">Pesquisar</button>
+        </form>
     </div>
     <a href="/obras/add" class="btn">Adicionar Obra</a>
     <table>
@@ -14,22 +13,31 @@
             <td>Nome</td>
             <td>Artista</td>
             <td>tipo</td>
-             <td>Descrição</td>
-             <td>Obra</td>
+            <td>Descrição</td>
+            <td>Obra</td>
             <td>Ações</td>
         </tr>
-      
+
         <%for (const {id, nomeColecao, artista, tipo, descricao, imagem} of Obrass) {%>
-        <tr>
-            <td><%=nomeColecao%></td>
-            <td><%=artista%></td>
-            <td><%=tipo%></td>
-            <td><%=descricao%></td>
-            <td><img src="<%=imagem%>" width="150" height="150"></td>
-            
-            <td><a href="/obras/edt/<%=id%>" class="btn">Editar</a>
-            <a href="/obras/del/<%=id%>" class="btn">Excluir</a></td>
-        </tr>
-        <%}%>
+            <tr>
+                <td>
+                    <%=nomeColecao%>
+                </td>
+                <td>
+                    <%=artista.nome%>
+                </td>
+                <td>
+                    <%=tipo%>
+                </td>
+                <td>
+                    <%=descricao%>
+                </td>
+                <td><img src="<%=imagem%>" width="150" height="150"></td>
+
+                <td><a href="/obras/edt/<%=id%>" class="btn">Editar</a>
+                    <a href="/obras/del/<%=id%>" class="btn">Excluir</a>
+                </td>
+            </tr>
+            <%}%>
     </table>
- <%-include('../rodape.ejs')%>
+    <%-include('../rodape.ejs')%>

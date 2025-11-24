@@ -4,10 +4,10 @@ const Obras = conexao.Schema({
     nomeColecao: {type:String, required:true},
     tipo: {type: String, required: true},
     descricao: {type:String, required: true},
-    imagem: {type: Buffer, required: false,
+    imagem: {type: Buffer, required: true,
     get:(valor) => {
         if (!valor) return null;
-            return `data:image/jpeg;base64,${valor.toString('base64')}`;
+            return `data:image/jpg;base64,${valor.toString('base64')}`;
     }
     },
     artista: {type: conexao.Types.ObjectId, ref: "Artista", required: false},

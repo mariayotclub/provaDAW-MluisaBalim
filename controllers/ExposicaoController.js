@@ -1,5 +1,6 @@
 
 import Exposicao from '../models/Exposicao.js'
+import Artista from '../models/Artista.js'
 
 export default class ExposicaoController{
 
@@ -7,7 +8,8 @@ export default class ExposicaoController{
         this.caminhoBase = caminhoBase
     
         this.openAdd = async(req, res)=>{
-            res.render(caminhoBase + "add")
+            const artistas = await Artista.find({})
+            res.render(caminhoBase + "add", {Artistas: artistas})
         }
         this.add = async(req, res)=>{
            
